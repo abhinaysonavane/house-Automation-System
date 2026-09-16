@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>House Automation System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🏠 House Automation System</h1>
+
+        <p class="subtitle">Smart Device Control Dashboard</p>
+
+        <!-- LIGHT -->
+        <div class="device-card">
+
+            <div class="device-icon">💡</div>
+
+            <h2>Light Control</h2>
+
+            <p>
+                Status:
+                <span id="lightStatus" class="status off">OFF</span>
+            </p>
+
+            <button id="lightButton" onclick="toggleDevice('Light')">
+                Turn ON Light
+            </button>
+
+        </div>
+
+
+        <!-- FAN -->
+        <div class="device-card">
+
+            <div class="device-icon">🌀</div>
+
+            <h2>Fan Control</h2>
+
+            <p>
+                Status:
+                <span id="fanStatus" class="status off">OFF</span>
+            </p>
+
+            <button id="fanButton" onclick="toggleDevice('Fan')">
+                Turn ON Fan
+            </button>
+
+        </div>
+
+
+        <!-- AC -->
+        <div class="device-card">
+
+            <div class="device-icon">❄️</div>
+
+            <h2>AC Control</h2>
+
+            <p>
+                Status:
+                <span id="acStatus" class="status off">OFF</span>
+            </p>
+
+            <button id="acButton" onclick="toggleDevice('AC')">
+                Turn ON AC
+            </button>
+
+        </div>
+
+
+        <!-- LOAD DEVICES -->
+        <button class="load-button" onclick="loadDevices()">
+            Refresh Device Status
+        </button>
+
+        <div id="message"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
